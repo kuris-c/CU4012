@@ -3,7 +3,7 @@
 #include <iomanip>
 
 std::string playerLocation;
-bool playGame = true;
+bool playGame = true, typeWriterEnabled = true;
 void onGameRun(), mainMenu(), onGameStart();
 
 int main()
@@ -44,14 +44,35 @@ void mainMenu()
 		break;
 	case 2:
 		system("CLS");
-		std::cout << "I will add some options, maybe, for now just Enter 1 to play the game, 2 to return to the main menu, or 3 to exit the application!" << std::endl;
+		std::cout << "Player Options.\n[1] Toggle TypeWriter Mode\n[2] Load Game\n[3] Return To Main Menu\n[4] Exit Application" << std::endl;
 		inputTooltip();
 		std::cin >> menuChoice;
 		if (menuChoice == 1)
 		{
-			break;
+			if (typeWriterEnabled)
+			{
+				typeWriterEnabled = false;
+				std::cout << "Type Writer Disabled\n";
+				system("pause");
+				system("CLS");
+				gameLogo();
+				mainMenu();
+			}
+			else
+			{
+				typeWriterEnabled = true;
+				std::cout << "Type Writer Enabled\n";
+				system("pause");
+				system("CLS");
+				gameLogo();
+				mainMenu();
+			}
 		}
 		if (menuChoice == 2)
+		{
+			break;
+		}
+		if (menuChoice == 3)
 		{
 			system("CLS");
 			gameLogo();
@@ -86,6 +107,7 @@ void mainMenu()
 	gameLogo();
 	textTyper("\n\nPrisoner 401. Welcome to your first day in the clink, I can assure you I will do whatever I can do to make this the most painful experience for you \npossible.. Try not to get into any fights, or you will be punished.\nJust fit in with the other prisoners.\n");
 	system("pause");
+	onGameStart();
 }
 
 //After Player Has Chosen To Play THe Game
