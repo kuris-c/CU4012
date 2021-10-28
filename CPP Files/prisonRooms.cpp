@@ -13,28 +13,28 @@ void createPrison()
 	cellBlockA.roomDescription = "You can see rows of prison cells, spread over multiple floors. The sight is almost daunting. In each corner of your eye is the subtle flicker of \nmovement as inmates pace, and run, and sit and talk, play and argue, or stand, clearly bored.";
 	//int pPresentAtDay[14];					
 	//int pPresentAtNight;					
-	cellBlockA.gPresentAtDay;						
+	cellBlockA.gPresentAtDay;
 	cellBlockA.gPresentAtNight;
 	cellBlockA.playerActions[0] = true;
-	cellBlockA.actionDescription[0] = "[1] Rummage Through A Random Cell\n";
+	cellBlockA.actionDescription[0] = "Rummage Through A Random Cell\n";
 	cellBlockA.playerActions[1] = true;
-	cellBlockA.actionDescription[1] = "[2] Socialise With The Other Prisoners\n";
+	cellBlockA.actionDescription[1] = "Socialise With The Other Prisoners\n";
 	cellBlockA.playerActions[2] = true;
-	cellBlockA.actionDescription[2] = "[3] Start A Fight\n";
+	cellBlockA.actionDescription[2] = "Start A Fight\n";
 	cellBlockA.playerActions[3] = true;
-	cellBlockA.actionDescription[3] = "[4] Play Board Games\n";
+	cellBlockA.actionDescription[3] = "Play Board Games\n";
 	for (int i = 4; i != 7; i++)
 	{
 		cellBlockA.playerActions[i] = false;
 	}
 	cellBlockA.locationsOpen[0] = true;
-	cellBlockA.locationsDescription[0] = "[5] Go To Your Prisoner's Cell\n";
+	cellBlockA.locationsDescription[0] = "Go To Your Prisoner's Cell\n";
 	cellBlockA.locationsOpen[1] = true;
-	cellBlockA.locationsDescription[1] = "[6] Go To The Shower Room\n";
+	cellBlockA.locationsDescription[1] = "Go To The Shower Room\n";
 	cellBlockA.locationsOpen[2] = true;
-	cellBlockA.locationsDescription[2] = "[7] Go To The Courtyard\n";
+	cellBlockA.locationsDescription[2] = "Go To The Courtyard\n";
 	cellBlockA.locationsOpen[3] = true;
-	cellBlockA.locationsDescription[3] = "[8] Go To The Chapel\n";
+	cellBlockA.locationsDescription[3] = "Go To The Chapel\n";
 	for (int i = 4; i != 18; i++)
 	{
 		cellBlockA.locationsOpen[i] = false;
@@ -52,21 +52,21 @@ void createPrison()
 	cellBlockB.gPresentAtDay;
 	cellBlockB.gPresentAtNight;
 	cellBlockB.playerActions[0] = true;
-	cellBlockB.actionDescription[0] = "[1] Rummage Through A Random Cell\n";
+	cellBlockB.actionDescription[0] = "[Rummage Through A Random Cell\n";
 	cellBlockB.playerActions[1] = true;
-	cellBlockB.actionDescription[1] = "[2] Socialize With The Other Prisoners\n";
+	cellBlockB.actionDescription[1] = "Socialize With The Other Prisoners\n";
 	cellBlockB.playerActions[2] = true;
-	cellBlockB.actionDescription[2] = "[3] Start A Fight\n";
+	cellBlockB.actionDescription[2] = "Start A Fight\n";
 	cellBlockB.playerActions[3] = true;
-	cellBlockB.actionDescription[3] = "[4] Play Board Games\n";
+	cellBlockB.actionDescription[3] = "Play Board Games\n";
 	for (int i = 4; i != 7; i++)
 	{
 		cellBlockB.playerActions[i] = false;
 	}
 	cellBlockB.locationsOpen[0] = true;
-	cellBlockB.locationsDescription[0] = "[5] Go To The Prison Shop\n";
+	cellBlockB.locationsDescription[0] = "Go To The Prison Shop\n";
 	cellBlockB.locationsOpen[1] = true;
-	cellBlockB.locationsDescription[1] = "[6] Go To The Courtyard\n";
+	cellBlockB.locationsDescription[1] = "Go To The Courtyard\n";
 	for (int i = 2; i != 18; i++)
 	{
 		cellBlockB.locationsOpen[i] = false;
@@ -84,21 +84,21 @@ void createPrison()
 	cellBlockC.gPresentAtDay;
 	cellBlockC.gPresentAtNight;
 	cellBlockC.playerActions[0] = true;
-	cellBlockC.actionDescription[0] = "[1] Rummage Through A Random Cell\n";
+	cellBlockC.actionDescription[0] = "Rummage Through A Random Cell\n";
 	cellBlockC.playerActions[1] = true;
-	cellBlockC.actionDescription[1] = "[2] Socialize With The Other Prisoners\n";
+	cellBlockC.actionDescription[1] = "Socialize With The Other Prisoners\n";
 	cellBlockC.playerActions[2] = true;
-	cellBlockC.actionDescription[2] = "[3] Start A Fight\n";
+	cellBlockC.actionDescription[2] = "Start A Fight\n";
 	cellBlockC.playerActions[3] = true;
-	cellBlockC.actionDescription[3] = "[4] Play Board Games\n";
+	cellBlockC.actionDescription[3] = "Play Board Games\n";
 	for (int i = 4; i != 7; i++)
 	{
 		cellBlockC.playerActions[i] = false;
 	}
 	cellBlockC.locationsOpen[0] = true;
-	cellBlockC.locationsDescription[0] = "[5] Go To The Laundry Room\n";
+	cellBlockC.locationsDescription[0] = "Go To The Laundry Room\n";
 	cellBlockC.locationsOpen[1] = true;
-	cellBlockC.locationsDescription[1] = "[6] Go To The Courtyard\n";
+	cellBlockC.locationsDescription[1] = "Go To The Courtyard\n";
 	for (int i = 2; i != 18; i++)
 	{
 		cellBlockC.locationsOpen[i] = false;
@@ -116,21 +116,21 @@ void createPrison()
 	cellBlockD.gPresentAtDay;
 	cellBlockD.gPresentAtNight;
 	cellBlockD.playerActions[0] = true;
-	cellBlockD.actionDescription[0] = "[1] Rummage Through A Random Cell\n";
+	cellBlockD.actionDescription[0] = "Rummage Through A Random Cell\n";
 	cellBlockD.playerActions[1] = true;
-	cellBlockD.actionDescription[1] = "[2] Socialize With The Other Prisoners\n";
+	cellBlockD.actionDescription[1] = "Socialize With The Other Prisoners\n";
 	cellBlockD.playerActions[2] = true;
-	cellBlockD.actionDescription[2] = "[3] Start A Fight\n";
+	cellBlockD.actionDescription[2] = "Start A Fight\n";
 	cellBlockD.playerActions[3] = true;
-	cellBlockD.actionDescription[3] = "[4] Play Board Games\n";
+	cellBlockD.actionDescription[3] = "Play Board Games\n";
 	for (int i = 4; i != 7; i++)
 	{
 		cellBlockD.playerActions[i] = false;
 	}
 	cellBlockD.locationsOpen[0] = true;
-	cellBlockD.locationsDescription[0] = "[5] Go To The Classroom\n";
+	cellBlockD.locationsDescription[0] = "Go To The Classroom\n";
 	cellBlockD.locationsOpen[1] = true;
-	cellBlockD.locationsDescription[1] = "[6] Go To The Courtyard\n";
+	cellBlockD.locationsDescription[1] = "Go To The Courtyard\n";
 	for (int i = 2; i != 18; i++)
 	{
 		cellBlockD.locationsOpen[i] = false;
@@ -148,20 +148,20 @@ void createPrison()
 	reception.gPresentAtDay;
 	reception.gPresentAtNight;
 	reception.playerActions[0] = true;
-	reception.actionDescription[0];
-	reception.playerActions[1] = true;
-	reception.actionDescription[1];
-	reception.playerActions[2] = true;
-	reception.actionDescription[2];
-	reception.playerActions[3] = true;
-	reception.actionDescription[3];
+	reception.actionDescription[0] = "Are You Sure You Would Like To Enter? Access Is Off Bounds For Prisoners\n";
+	reception.playerActions[1] = false;
+	reception.actionDescription[1] = "Attempt To Break Into Room\n";
+	reception.playerActions[2] = false;
+	reception.actionDescription[2] = "Attempt To Break Into Guards Cabinet\n";
+	reception.playerActions[3] = false;
+	reception.actionDescription[3] = "Raise Prison Alarm\n";
+	reception.playerActions[4] = false;
+	reception.actionDescription[4] = "Open External Door\n";
 	reception.locationsOpen[0] = true;
-	reception.locationsDescription[0];
-	reception.locationsOpen[1] = true;
-	reception.locationsDescription[1];
-	reception.locationsOpen[2] = true;
-	reception.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
+	reception.locationsDescription[0] = "Go To The Courtyard\n";
+	reception.locationsOpen[1] = false;
+	reception.locationsDescription[1] = "Prison Entrance\n";
+	for (int i = 2; i != 16; i++)
 	{
 		reception.locationsOpen[i] = false;
 	}
@@ -222,7 +222,7 @@ void createPrison()
 	courtyard.locationsOpen[14] = false;
 	courtyard.locationsOpen[15] = false;
 	courtyard.locationsOpen[16] = false;
-	
+
 #pragma endregion
 
 #pragma region canteen
