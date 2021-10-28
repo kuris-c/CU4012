@@ -11,6 +11,7 @@ void textTyper(std::string inputText); //Type Text In Typewriter Style
 void inputTooltip(); //Allows the player to know when to input text
 void gamePlay(); //Main script to handle all gameplay elements
 void createPrison();
+extern bool typeWriterEnabled;
 
 //Initialize the player
 class Player
@@ -95,6 +96,7 @@ public:
 
 	void showRoomActions()
 	{
+		i = 0;
 		std::cout << "\n\n";
 
 		for (int rA = 0; rA != 7; rA++)
