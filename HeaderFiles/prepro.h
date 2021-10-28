@@ -56,22 +56,28 @@ extern SideCharacters playerSidekick;
 //Initialize the rooms
 class PrisonRooms
 {
+	//Public Variables
 public:
-	bool playerAccess;						//If Player Can Access The Room
-	bool firstVisit;						//If Player Is Visiting For The First Time
-	std::string roomDesc1;					//If Player Wakes In The Room
-	std::string roomDesc2;					//If Player Walks Into The Room
-	std::string roomDescription;			//Description Of The Room And What Can Be Seen
-	//int pPresentAtDay[14];					//Prisoners Present At Each Hour Of The Day
-	//int pPresentAtNight;					//Prisoners Present At Night
-	int gPresentAtDay;						//Guards Present During The Day
-	int gPresentAtNight;					//Guards Present During The Night
-	bool playerActions[7];					//How Many Actions The Player Can Choose In Each Room
-	std::string actionDescription[7];		//Description Of The Actions
-	bool locationsOpen[18];					//How Many Rooms Are Accessible
-	std::string locationsDescription[18];	//Description Of The Rooms
+	bool playerAccess;									//If Player Can Access The Room
+	bool firstVisit;									//If Player Is Visiting For The First Time
+	std::string roomDesc1;								//If Player Wakes In The Room
+	std::string roomDesc2;								//If Player Walks Into The Room
+	std::string roomDescription;						//Description Of The Room And What Can Be Seen
+	//int pPresentAtDay[14];								//Prisoners Present At Each Hour Of The Day
+	//int pPresentAtNight;								//Prisoners Present At Night
+	int gPresentAtDay;									//Guards Present During The Day
+	int gPresentAtNight;								//Guards Present During The Night
+	bool playerActions[7];								//How Many Actions The Player Can Choose In Each Room
+	std::string actionDescription[7];					//Description Of The Actions
+	bool locationsOpen[18];								//How Many Rooms Are Accessible
+	std::string locationsDescription[18];				//Description Of The Rooms
 
+	//Private Variables
+private:
+	int i = 0;
 
+	//Public Functions
+public:
 	void showRoomDescription()
 	{
 		system("CLS");
@@ -91,11 +97,12 @@ public:
 	{
 		std::cout << "\n\n";
 
-		for (int i = 0; i != 7; i++)
+		for (int rA = 0; rA != 7; rA++)
 		{
-			if (playerActions[i] == true)
+			if (playerActions[rA] == true)
 			{
-				std::cout << actionDescription[i];
+				i++;
+				std::cout << "[" << i << "] " << actionDescription[rA];
 			}
 		}
 	}
@@ -104,11 +111,12 @@ public:
 	{
 		std::cout << "\n";
 
-		for (int i = 0; i != 18; i++)
+		for (int rL = 0; rL != 18; rL++)
 		{
-			if (locationsOpen[i] == true)
+			if (locationsOpen[rL] == true)
 			{
-				std::cout << locationsDescription[i];
+				i++;
+				std::cout << "[" << i << "] " << locationsDescription[rL];
 			}
 		}
 	}
