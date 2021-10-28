@@ -157,6 +157,10 @@ void createPrison()
 	reception.actionDescription[3] = "Raise Prison Alarm\n";
 	reception.playerActions[4] = false;
 	reception.actionDescription[4] = "Open External Door\n";
+	for (int i = 5; i != 7; i++)
+	{
+		reception.playerActions[i] = false;
+	}
 	reception.locationsOpen[0] = true;
 	reception.locationsDescription[0] = "Go To The Courtyard\n";
 	reception.locationsOpen[1] = false;
@@ -178,47 +182,47 @@ void createPrison()
 	courtyard.gPresentAtDay;
 	courtyard.gPresentAtNight;
 	courtyard.playerActions[0] = true;
-	courtyard.actionDescription[0] = "[1] Play Football\n";
+	courtyard.actionDescription[0] = "Play Football\n";
 	courtyard.playerActions[1] = true;
-	courtyard.actionDescription[1] = "[2] Watch Others Play Football\n";
+	courtyard.actionDescription[1] = "Watch Others Play Football\n";
 	courtyard.playerActions[2] = true;
-	courtyard.actionDescription[2] = "[3] Go For A Run\n";
+	courtyard.actionDescription[2] = "Go For A Run\n";
 	courtyard.playerActions[3] = true;
-	courtyard.actionDescription[3] = "[4] Practice With Training Dummies\n";
+	courtyard.actionDescription[3] = "Practice With Training Dummies\n";
 	courtyard.playerActions[4] = true;
-	courtyard.actionDescription[4] = "[5] Socialise With The Other Prisoners\n";
+	courtyard.actionDescription[4] = "Socialise With The Other Prisoners\n";
 	courtyard.playerActions[5] = true;
-	courtyard.actionDescription[5] = "[6] Meditate On The Grass\n";
+	courtyard.actionDescription[5] = "Meditate On The Grass\n";
 	courtyard.playerActions[6] = true;
-	courtyard.actionDescription[6] = "[7] Start A Fight\n";
+	courtyard.actionDescription[6] = "Start A Fight\n";
 	courtyard.locationsOpen[0] = true;
-	courtyard.locationsDescription[0] = "[8] Go To Cell Block A\n";
+	courtyard.locationsDescription[0] = "Go To Cell Block A\n";
 	courtyard.locationsOpen[1] = true;
-	courtyard.locationsDescription[1] = "[9] Go To Cell Block B\n";
+	courtyard.locationsDescription[1] = "Go To Cell Block B\n";
 	courtyard.locationsOpen[2] = true;
-	courtyard.locationsDescription[2] = "[10] Go To Cell Block C\n";
+	courtyard.locationsDescription[2] = "Go To Cell Block C\n";
 	courtyard.locationsOpen[3] = true;
-	courtyard.locationsDescription[3] = "[11] Go To Cell Block D\n";
+	courtyard.locationsDescription[3] = "Go To Cell Block D\n";
 	courtyard.locationsOpen[4] = true;
-	courtyard.locationsDescription[4] = "[12] Go To The Reception\n";
+	courtyard.locationsDescription[4] = "Go To The Reception\n";
 	courtyard.locationsOpen[5] = true;
-	courtyard.locationsDescription[5] = "[13] Go To The Canteen\n";
+	courtyard.locationsDescription[5] = "Go To The Canteen\n";
 	courtyard.locationsOpen[6] = true;
-	courtyard.locationsDescription[6] = "[14] Go To The Kitchen\n";
+	courtyard.locationsDescription[6] = "Go To The Kitchen\n";
 	courtyard.locationsOpen[7] = true;
-	courtyard.locationsDescription[7] = "[15] Go To The Infirmary\n";
+	courtyard.locationsDescription[7] = "Go To The Infirmary\n";
 	courtyard.locationsOpen[8] = true;
-	courtyard.locationsDescription[8] = "[16] Go To The Chapel\n";
+	courtyard.locationsDescription[8] = "Go To The Chapel\n";
 	courtyard.locationsOpen[9] = true;
-	courtyard.locationsDescription[9] = "[17] Go To The Common Room\n";
+	courtyard.locationsDescription[9] = "Go To The Common Room\n";
 	courtyard.locationsOpen[10] = true;
-	courtyard.locationsDescription[10] = "[18] Go To The Laundry\n";
+	courtyard.locationsDescription[10] = "Go To The Laundry\n";
 	courtyard.locationsOpen[11] = true;
-	courtyard.locationsDescription[11] = "[19] Go To The Classroom\n";
+	courtyard.locationsDescription[11] = "Go To The Classroom\n";
 	courtyard.locationsOpen[12] = true;
-	courtyard.locationsDescription[12] = "[20] Go To The Prison Shop\n";
+	courtyard.locationsDescription[12] = "Go To The Prison Shop\n";
 	courtyard.locationsOpen[13] = true;
-	courtyard.locationsDescription[13] = "[21] Go To Visitation\n";
+	courtyard.locationsDescription[13] = "Go To Visitation\n";
 	courtyard.locationsOpen[14] = false;
 	courtyard.locationsOpen[15] = false;
 	courtyard.locationsOpen[16] = false;
@@ -236,20 +240,24 @@ void createPrison()
 	canteen.gPresentAtDay;
 	canteen.gPresentAtNight;
 	canteen.playerActions[0] = true;
-	canteen.actionDescription[0];
+	canteen.actionDescription[0] = "Eat Meal\n";
 	canteen.playerActions[1] = true;
-	canteen.actionDescription[1];
+	canteen.actionDescription[1] = "Use Prison Vending Machine\n";
 	canteen.playerActions[2] = true;
-	canteen.actionDescription[2];
+	canteen.actionDescription[2] = "Socialise With Other Prisoners\n";
 	canteen.playerActions[3] = true;
-	canteen.actionDescription[3];
+	canteen.actionDescription[3] = "Start A Fight\n";
+	canteen.playerActions[4] = true;
+	canteen.actionDescription[4] = "Look For Contraband\n";
+	for (int i = 4; i != 7; i++)
+	{
+		canteen.playerActions[i] = false;
+	}
 	canteen.locationsOpen[0] = true;
-	canteen.locationsDescription[0];
+	canteen.locationsDescription[0] = "Go To The Courtyard\n";
 	canteen.locationsOpen[1] = true;
-	canteen.locationsDescription[1];
-	canteen.locationsOpen[2] = true;
-	canteen.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
+	canteen.locationsDescription[1] = "Go To The Kitchen\n";
+	for (int i = 2; i != 16; i++)
 	{
 		canteen.locationsOpen[i] = false;
 	}
