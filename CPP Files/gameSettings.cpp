@@ -19,12 +19,24 @@ void gameLogo()
 void textTyper(std::string inputText)
 {
 	int i = 0;
-	while (inputText[i] != '\0')
+	if (typeWriterEnabled)
 	{
-		std::cout << inputText[i];
-		Sleep(18);
-		i++;
-	};
+		while (inputText[i] != '\0')
+		{
+			std::cout << inputText[i];
+			Sleep(18);
+			i++;
+		};
+	}
+	else
+	{
+		while (inputText[i] != '\0')
+		{
+			std::cout << inputText[i];
+			Sleep(0);
+			i++;
+		};
+	}
 }
 
 void displayGameWindow(int width, int height)
