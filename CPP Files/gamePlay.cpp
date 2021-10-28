@@ -159,21 +159,37 @@ void gamePlay()
 			switch (playerChoice)
 			{
 			case 1:
-				//Rummage Through Cell
+				if (reception.playerActions[0] == true)
+				{
+					//Are you sure you would like to enter reception
+				}
 				break;
 			case 2:
-				//Socialise With Other Prisoners
+				if (reception.playerActions[1] == true)
+				{
+					//Break Into Room
+				}
 				break;
 			case 3:
-				//Start A Fight
-				break;
+				if (reception.playerActions[2] == true)
+				{
+					//Attempt to break into guards cabinet
+				}
 			case 4:
-				//Play Board Games
+				if (reception.playerActions[3] == true)
+				{
+					//Raise Prison alarm
+				}
 			case 5:
-				playerLocation = "classroom";
-				break;
+				if (reception.playerActions[4] == true)
+				{
+					//Open External Door
+				}
 			case 6:
 				playerLocation = "courtyard";
+				break;
+			case 7:
+				//playerLocation = "prisonEntrance";
 				break;
 			default:
 				std::cout << "Please Enter The Corresponding Number!";
@@ -253,6 +269,76 @@ void gamePlay()
 				break;
 			case 21:
 				playerLocation = "visitation";
+				break;
+			default:
+				std::cout << "Please Enter The Corresponding Number!";
+				inputTooltip();
+				std::cin >> playerChoice;
+				break;
+			}
+		}
+
+		if (playerLocation == "canteen")
+		{
+			canteen.showRoomDescription();
+			canteen.showRoomActions();
+			canteen.showRoomLocations();
+			inputTooltip();
+			std::cin >> playerChoice;
+			switch (playerChoice)
+			{
+			case 1:
+				//Eat Meal
+				break;
+			case 2:
+				//Use Prison Vending Machines
+				break;
+			case 3:
+				//Socialise With Other Prisoners
+				break;
+			case 4:
+				//Start A Fight
+			case 5:
+				//Look For Contraband
+			case 6:
+				playerLocation = "courtyard";
+				break;
+			case 7:
+				playerLocation = "kitchen";
+				break;
+			default:
+				std::cout << "Please Enter The Corresponding Number!";
+				inputTooltip();
+				std::cin >> playerChoice;
+				break;
+			}
+		}
+
+		if (playerLocation == "kitchen")
+		{
+			reception.showRoomDescription();
+			reception.showRoomActions();
+			reception.showRoomLocations();
+			inputTooltip();
+			std::cin >> playerChoice;
+			switch (playerChoice)
+			{
+			case 1:
+				//Rummage Through Cell
+				break;
+			case 2:
+				//Socialise With Other Prisoners
+				break;
+			case 3:
+				//Start A Fight
+				break;
+			case 4:
+				//Play Board Games
+			case 5:
+				playerLocation = "classroom";
+				break;
+			case 6:
+				playerLocation = "courtyard";
 				break;
 			default:
 				std::cout << "Please Enter The Corresponding Number!";
