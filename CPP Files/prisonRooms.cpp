@@ -1,6 +1,6 @@
 #include "prepro.h"
 
-PrisonRooms cellBlockA, cellBlockB, cellBlockC, cellBlockD, reception, courtyard, canteen, kitchen, infirmary, chapel, commonRoom, laundry, classroom, prisonShop, visitation, personalCell, tunnel, therapistOffice, shower;
+PrisonRooms cellBlockA, cellBlockB, cellBlockC, cellBlockD, reception, courtyard, canteen, chapel, infirmary, chapel, commonRoom, laundry, classroom, prisonShop, visitation, personalCell, tunnel, therapistOffice, shower;
 
 void createPrison()
 {
@@ -23,22 +23,14 @@ void createPrison()
 	cellBlockA.actionDescription[2] = "Start A Fight\n";
 	cellBlockA.playerActions[3] = true;
 	cellBlockA.actionDescription[3] = "Play Board Games\n";
-	for (int i = 4; i != 7; i++)
-	{
-		cellBlockA.playerActions[i] = false;
-	}
-	cellBlockA.locationsOpen[0] = true;
-	cellBlockA.locationsDescription[0] = "Go To Your Prisoner's Cell\n";
-	cellBlockA.locationsOpen[1] = true;
-	cellBlockA.locationsDescription[1] = "Go To The Shower Room\n";
-	cellBlockA.locationsOpen[2] = true;
-	cellBlockA.locationsDescription[2] = "Go To The Courtyard\n";
-	cellBlockA.locationsOpen[3] = true;
-	cellBlockA.locationsDescription[3] = "Go To The Chapel\n";
-	for (int i = 4; i != 18; i++)
-	{
-		cellBlockA.locationsOpen[i] = false;
-	}
+	cellBlockA.playerActions[4] = true;
+	cellBlockA.actionDescription[4] = "Go To Your Prisoner's Cell\n";
+	cellBlockA.playerActions[5] = true;
+	cellBlockA.actionDescription[5] = "Go To The Shower Room\n";
+	cellBlockA.playerActions[6] = true;
+	cellBlockA.actionDescription[6] = "Go To The Courtyard\n";
+	cellBlockA.playerActions[7] = true;
+	cellBlockA.actionDescription[7] = "Go To The Chapel\n";
 #pragma endregion
 
 #pragma region cellBlockB
@@ -59,18 +51,10 @@ void createPrison()
 	cellBlockB.actionDescription[2] = "Start A Fight\n";
 	cellBlockB.playerActions[3] = true;
 	cellBlockB.actionDescription[3] = "Play Board Games\n";
-	for (int i = 4; i != 7; i++)
-	{
-		cellBlockB.playerActions[i] = false;
-	}
-	cellBlockB.locationsOpen[0] = true;
-	cellBlockB.locationsDescription[0] = "Go To The Prison Shop\n";
-	cellBlockB.locationsOpen[1] = true;
-	cellBlockB.locationsDescription[1] = "Go To The Courtyard\n";
-	for (int i = 2; i != 18; i++)
-	{
-		cellBlockB.locationsOpen[i] = false;
-	}
+	cellBlockB.playerActions[4] = true;
+	cellBlockB.actionDescription[4] = "Go To The Prison Shop\n";
+	cellBlockB.playerActions[5] = true;
+	cellBlockB.actionDescription[5] = "Go To The Courtyard\n";
 #pragma endregion
 
 #pragma region cellBlockC
@@ -91,18 +75,10 @@ void createPrison()
 	cellBlockC.actionDescription[2] = "Start A Fight\n";
 	cellBlockC.playerActions[3] = true;
 	cellBlockC.actionDescription[3] = "Play Board Games\n";
-	for (int i = 4; i != 7; i++)
-	{
-		cellBlockC.playerActions[i] = false;
-	}
-	cellBlockC.locationsOpen[0] = true;
-	cellBlockC.locationsDescription[0] = "Go To The Laundry Room\n";
-	cellBlockC.locationsOpen[1] = true;
-	cellBlockC.locationsDescription[1] = "Go To The Courtyard\n";
-	for (int i = 2; i != 18; i++)
-	{
-		cellBlockC.locationsOpen[i] = false;
-	}
+	cellBlockC.playerActions[4] = true;
+	cellBlockC.actionDescription[4] = "Go To The Laundry Room\n";
+	cellBlockC.playerActions[5] = true;
+	cellBlockC.actionDescription[5] = "Go To The Courtyard\n";
 #pragma endregion
 
 #pragma region cellBlockD
@@ -123,18 +99,10 @@ void createPrison()
 	cellBlockD.actionDescription[2] = "Start A Fight\n";
 	cellBlockD.playerActions[3] = true;
 	cellBlockD.actionDescription[3] = "Play Board Games\n";
-	for (int i = 4; i != 7; i++)
-	{
-		cellBlockD.playerActions[i] = false;
-	}
-	cellBlockD.locationsOpen[0] = true;
-	cellBlockD.locationsDescription[0] = "Go To The Classroom\n";
-	cellBlockD.locationsOpen[1] = true;
-	cellBlockD.locationsDescription[1] = "Go To The Courtyard\n";
-	for (int i = 2; i != 18; i++)
-	{
-		cellBlockD.locationsOpen[i] = false;
-	}
+	cellBlockD.playerActions[4] = true;
+	cellBlockD.actionDescription[4] = "Go To The Classroom\n";
+	cellBlockD.playerActions[5] = true;
+	cellBlockD.actionDescription[5] = "Go To The Courtyard\n";
 #pragma endregion
 
 #pragma region reception
@@ -157,18 +125,10 @@ void createPrison()
 	reception.actionDescription[3] = "Raise Prison Alarm\n";
 	reception.playerActions[4] = false;
 	reception.actionDescription[4] = "Open External Door\n";
-	for (int i = 5; i != 7; i++)
-	{
-		reception.playerActions[i] = false;
-	}
-	reception.locationsOpen[0] = true;
-	reception.locationsDescription[0] = "Go To The Courtyard\n";
-	reception.locationsOpen[1] = false;
-	reception.locationsDescription[1] = "Prison Entrance\n";
-	for (int i = 2; i != 16; i++)
-	{
-		reception.locationsOpen[i] = false;
-	}
+	reception.playerActions[5] = true;
+	reception.actionDescription[5] = "Go To The Courtyard\n";
+	reception.playerActions[6] = false;
+	reception.actionDescription[6] = "Prison Entrance\n";
 #pragma endregion
 
 #pragma region courtyard
@@ -195,37 +155,34 @@ void createPrison()
 	courtyard.actionDescription[5] = "Meditate On The Grass\n";
 	courtyard.playerActions[6] = true;
 	courtyard.actionDescription[6] = "Start A Fight\n";
-	courtyard.locationsOpen[0] = true;
-	courtyard.locationsDescription[0] = "Go To Cell Block A\n";
-	courtyard.locationsOpen[1] = true;
-	courtyard.locationsDescription[1] = "Go To Cell Block B\n";
-	courtyard.locationsOpen[2] = true;
-	courtyard.locationsDescription[2] = "Go To Cell Block C\n";
-	courtyard.locationsOpen[3] = true;
-	courtyard.locationsDescription[3] = "Go To Cell Block D\n";
-	courtyard.locationsOpen[4] = true;
-	courtyard.locationsDescription[4] = "Go To The Reception\n";
-	courtyard.locationsOpen[5] = true;
-	courtyard.locationsDescription[5] = "Go To The Canteen\n";
-	courtyard.locationsOpen[6] = true;
-	courtyard.locationsDescription[6] = "Go To The Kitchen\n";
-	courtyard.locationsOpen[7] = true;
-	courtyard.locationsDescription[7] = "Go To The Infirmary\n";
-	courtyard.locationsOpen[8] = true;
-	courtyard.locationsDescription[8] = "Go To The Chapel\n";
-	courtyard.locationsOpen[9] = true;
-	courtyard.locationsDescription[9] = "Go To The Common Room\n";
-	courtyard.locationsOpen[10] = true;
-	courtyard.locationsDescription[10] = "Go To The Laundry\n";
-	courtyard.locationsOpen[11] = true;
-	courtyard.locationsDescription[11] = "Go To The Classroom\n";
-	courtyard.locationsOpen[12] = true;
-	courtyard.locationsDescription[12] = "Go To The Prison Shop\n";
-	courtyard.locationsOpen[13] = true;
-	courtyard.locationsDescription[13] = "Go To Visitation\n";
-	courtyard.locationsOpen[14] = false;
-	courtyard.locationsOpen[15] = false;
-	courtyard.locationsOpen[16] = false;
+	courtyard.playerActions[7] = true;
+	courtyard.actionDescription[7] = "Go To Cell Block A\n";
+	courtyard.playerActions[8] = true;
+	courtyard.actionDescription[8] = "Go To Cell Block B\n";
+	courtyard.playerActions[9] = true;
+	courtyard.actionDescription[9] = "Go To Cell Block C\n";
+	courtyard.playerActions[10] = true;
+	courtyard.actionDescription[10] = "Go To Cell Block D\n";
+	courtyard.playerActions[11] = true;
+	courtyard.actionDescription[11] = "Go To The Reception\n";
+	courtyard.playerActions[12] = true;
+	courtyard.actionDescription[12] = "Go To The Canteen\n";
+	courtyard.playerActions[13] = true;
+	courtyard.actionDescription[13] = "Go To The Kitchen\n";
+	courtyard.playerActions[14] = true;
+	courtyard.actionDescription[14] = "Go To The Infirmary\n";
+	courtyard.playerActions[15] = true;
+	courtyard.actionDescription[15] = "Go To The Chapel\n";
+	courtyard.playerActions[16] = true;
+	courtyard.actionDescription[16] = "Go To The Common Room\n";
+	courtyard.playerActions[17] = true;
+	courtyard.actionDescription[17] = "Go To The Laundry\n";
+	courtyard.playerActions[18] = true;
+	courtyard.actionDescription[18] = "Go To The Classroom\n";
+	courtyard.playerActions[19] = true;
+	courtyard.actionDescription[19] = "Go To The Prison Shop\n";
+	courtyard.playerActions[20] = true;
+	courtyard.actionDescription[20] = "Go To Visitation\n";
 
 #pragma endregion
 
@@ -249,18 +206,10 @@ void createPrison()
 	canteen.actionDescription[3] = "Start A Fight\n";
 	canteen.playerActions[4] = true;
 	canteen.actionDescription[4] = "Look For Contraband\n";
-	for (int i = 4; i != 7; i++)
-	{
-		canteen.playerActions[i] = false;
-	}
-	canteen.locationsOpen[0] = true;
-	canteen.locationsDescription[0] = "Go To The Courtyard\n";
-	canteen.locationsOpen[1] = true;
-	canteen.locationsDescription[1] = "Go To The Kitchen\n";
-	for (int i = 2; i != 16; i++)
-	{
-		canteen.locationsOpen[i] = false;
-	}
+	canteen.playerActions[5] = true;
+	canteen.actionDescription[5] = "Go To The Courtyard\n";
+	canteen.playerActions[6] = true;
+	canteen.actionDescription[6] = "Go To The Kitchen\n";
 #pragma endregion
 
 #pragma region kitchen
@@ -274,23 +223,15 @@ void createPrison()
 	kitchen.gPresentAtDay;
 	kitchen.gPresentAtNight;
 	kitchen.playerActions[0] = true;
-	kitchen.actionDescription[0];
+	kitchen.actionDescription[0] = "Work In The Kitchen\n";
 	kitchen.playerActions[1] = true;
-	kitchen.actionDescription[1];
+	kitchen.actionDescription[1] = "Look For Controband\n";
 	kitchen.playerActions[2] = true;
-	kitchen.actionDescription[2];
+	kitchen.actionDescription[2] = "Start A Fire\n";
 	kitchen.playerActions[3] = true;
-	kitchen.actionDescription[3];
-	kitchen.locationsOpen[0] = true;
-	kitchen.locationsDescription[0];
-	kitchen.locationsOpen[1] = true;
-	kitchen.locationsDescription[1];
-	kitchen.locationsOpen[2] = true;
-	kitchen.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
-	{
-		kitchen.locationsOpen[i] = false;
-	}
+	kitchen.actionDescription[3] = "Go To The Courtyard\n";
+	kitchen.playerActions[4] = true;
+	kitchen.actionDescription[4] = "Go To The Canteen\n";
 #pragma endregion
 
 #pragma region infirmary
@@ -304,23 +245,17 @@ void createPrison()
 	infirmary.gPresentAtDay;
 	infirmary.gPresentAtNight;
 	infirmary.playerActions[0] = true;
-	infirmary.actionDescription[0];
+	infirmary.actionDescription[0] = "Go For A Checkup\n";
 	infirmary.playerActions[1] = true;
-	infirmary.actionDescription[1];
+	infirmary.actionDescription[1] = "Consult The Doctor\n";
 	infirmary.playerActions[2] = true;
-	infirmary.actionDescription[2];
+	infirmary.actionDescription[2] = "Search For Contraband\n";
 	infirmary.playerActions[3] = true;
-	infirmary.actionDescription[3];
-	infirmary.locationsOpen[0] = true;
-	infirmary.locationsDescription[0];
-	infirmary.locationsOpen[1] = true;
-	infirmary.locationsDescription[1];
-	infirmary.locationsOpen[2] = true;
-	infirmary.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
-	{
-		infirmary.locationsOpen[i] = false;
-	}
+	infirmary.actionDescription[3] = "Go To The Courtyard\n";
+	infirmary.playerActions[4] = true;
+	infirmary.actionDescription[4] = "Go To The Chapel\n";
+	infirmary.playerActions[5] = true;
+	infirmary.actionDescription[5] = "Go To The Therapists Office\n";
 #pragma endregion
 
 #pragma region chapel
@@ -334,23 +269,21 @@ void createPrison()
 	chapel.gPresentAtDay;
 	chapel.gPresentAtNight;
 	chapel.playerActions[0] = true;
-	chapel.actionDescription[0];
+	chapel.actionDescription[0] = "Pray In Silence\n";
 	chapel.playerActions[1] = true;
-	chapel.actionDescription[1];
+	chapel.actionDescription[1] = "Join Prayer Session\n";
 	chapel.playerActions[2] = true;
-	chapel.actionDescription[2];
+	chapel.actionDescription[2] = "Join Mass\n";
 	chapel.playerActions[3] = true;
-	chapel.actionDescription[3];
-	chapel.locationsOpen[0] = true;
-	chapel.locationsDescription[0];
-	chapel.locationsOpen[1] = true;
-	chapel.locationsDescription[1];
-	chapel.locationsOpen[2] = true;
-	chapel.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
-	{
-		cellBlockA.locationsOpen[i] = false;
-	}
+	chapel.actionDescription[3] = "Confession\n";
+	chapel.playerActions[4] = true;
+	chapel.actionDescription[4] = "Search For Contraband\n";
+	chapel.playerActions[5] = true;
+	chapel.actionDescription[5] = "Go To The Courtyard\n";
+	chapel.playerActions[6] = true;
+	chapel.actionDescription[6] = "Go To The Infirmary\n";
+	chapel.playerActions[7] = true;
+	chapel.actionDescription[7] = "Go To Cell Block A\n";
 #pragma endregion
 
 #pragma region commonRoom
@@ -364,23 +297,21 @@ void createPrison()
 	commonRoom.gPresentAtDay;
 	commonRoom.gPresentAtNight;
 	commonRoom.playerActions[0] = true;
-	commonRoom.actionDescription[0];
+	commonRoom.actionDescription[0] = "Join AA Meeting\n";
 	commonRoom.playerActions[1] = true;
-	commonRoom.actionDescription[1];
+	commonRoom.actionDescription[1] = "Play Table Football\n";
 	commonRoom.playerActions[2] = true;
-	commonRoom.actionDescription[2];
+	commonRoom.actionDescription[2] = "Play Chess\n";
 	commonRoom.playerActions[3] = true;
-	commonRoom.actionDescription[3];
-	commonRoom.locationsOpen[0] = true;
-	commonRoom.locationsDescription[0];
-	commonRoom.locationsOpen[1] = true;
-	commonRoom.locationsDescription[1];
-	commonRoom.locationsOpen[2] = true;
-	commonRoom.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
-	{
-		commonRoom.locationsOpen[i] = false;
-	}
+	commonRoom.actionDescription[3] = "Watch TV\n";
+	commonRoom.playerActions[4] = true;
+	commonRoom.actionDescription[4] = "Socialise With Other Inmates\n";
+	commonRoom.playerActions[5] = true;
+	commonRoom.actionDescription[5] = "Search For Contraband\n";
+	commonRoom.playerActions[6] = true;
+	commonRoom.actionDescription[6] = "Go To The Courtyard\n";
+	commonRoom.playerActions[7] = true;
+	commonRoom.actionDescription[7] = "Go To The Classroom\n";
 #pragma endregion
 
 #pragma region laundry
@@ -394,23 +325,19 @@ void createPrison()
 	laundry.gPresentAtDay;
 	laundry.gPresentAtNight;
 	laundry.playerActions[0] = true;
-	laundry.actionDescription[0];
+	laundry.actionDescription[0] = "Work In The Laundry\n";
 	laundry.playerActions[1] = true;
-	laundry.actionDescription[1];
+	laundry.actionDescription[1] = "Search For Contraband\n";
 	laundry.playerActions[2] = true;
 	laundry.actionDescription[2];
 	laundry.playerActions[3] = true;
 	laundry.actionDescription[3];
-	laundry.locationsOpen[0] = true;
-	laundry.locationsDescription[0];
-	laundry.locationsOpen[1] = true;
-	laundry.locationsDescription[1];
-	laundry.locationsOpen[2] = true;
-	laundry.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
-	{
-		laundry.locationsOpen[i] = false;
-	}
+	laundry.playerActions[4] = true;
+	laundry.actionDescription[4];
+	laundry.playerActions[5] = true;
+	laundry.actionDescription[5];
+	laundry.playerActions[6] = true;
+	laundry.actionDescription[6];
 #pragma endregion
 
 #pragma region classroom
@@ -431,16 +358,12 @@ void createPrison()
 	classroom.actionDescription[2];
 	classroom.playerActions[3] = true;
 	classroom.actionDescription[3];
-	classroom.locationsOpen[0] = true;
-	classroom.locationsDescription[0];
-	classroom.locationsOpen[1] = true;
-	classroom.locationsDescription[1];
-	classroom.locationsOpen[2] = true;
-	classroom.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
-	{
-		classroom.locationsOpen[i] = false;
-	}
+	classroom.playerActions[4] = true;
+	classroom.actionDescription[4];
+	classroom.playerActions[5] = true;
+	classroom.actionDescription[5];
+	classroom.playerActions[6] = true;
+	classroom.actionDescription[6];
 #pragma endregion
 
 #pragma region prisonShop
@@ -461,16 +384,12 @@ void createPrison()
 	prisonShop.actionDescription[2];
 	prisonShop.playerActions[3] = true;
 	prisonShop.actionDescription[3];
-	prisonShop.locationsOpen[0] = true;
-	prisonShop.locationsDescription[0];
-	prisonShop.locationsOpen[1] = true;
-	prisonShop.locationsDescription[1];
-	prisonShop.locationsOpen[2] = true;
-	prisonShop.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
-	{
-		prisonShop.locationsOpen[i] = false;
-	}
+	prisonShop.playerActions[4] = true;
+	prisonShop.actionDescription[4];
+	prisonShop.playerActions[5] = true;
+	prisonShop.actionDescription[5];
+	prisonShop.playerActions[6] = true;
+	prisonShop.actionDescription[6];
 #pragma endregion
 
 #pragma region visitation
@@ -491,16 +410,12 @@ void createPrison()
 	visitation.actionDescription[2];
 	visitation.playerActions[3] = true;
 	visitation.actionDescription[3];
-	visitation.locationsOpen[0] = true;
-	visitation.locationsDescription[0];
-	visitation.locationsOpen[1] = true;
-	visitation.locationsDescription[1];
-	visitation.locationsOpen[2] = true;
-	visitation.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
-	{
-		visitation.locationsOpen[i] = false;
-	}
+	visitation.playerActions[4] = true;
+	visitation.actionDescription[4];
+	visitation.playerActions[5] = true;
+	visitation.actionDescription[5];
+	visitation.playerActions[6] = true;
+	visitation.actionDescription[6];
 #pragma endregion
 
 #pragma region personalCell
@@ -521,16 +436,12 @@ void createPrison()
 	personalCell.actionDescription[2];
 	personalCell.playerActions[3] = true;
 	personalCell.actionDescription[3];
-	personalCell.locationsOpen[0] = true;
-	personalCell.locationsDescription[0];
-	personalCell.locationsOpen[1] = true;
-	personalCell.locationsDescription[1];
-	personalCell.locationsOpen[2] = true;
-	personalCell.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
-	{
-		personalCell.locationsOpen[i] = false;
-	}
+	personalCell.playerActions[4] = true;
+	personalCell.actionDescription[4];
+	personalCell.playerActions[5] = true;
+	personalCell.actionDescription[5];
+	personalCell.playerActions[6] = true;
+	personalCell.actionDescription[6];
 #pragma endregion
 
 #pragma region tunnel
@@ -551,16 +462,12 @@ void createPrison()
 	tunnel.actionDescription[2];
 	tunnel.playerActions[3] = true;
 	tunnel.actionDescription[3];
-	tunnel.locationsOpen[0] = true;
-	tunnel.locationsDescription[0];
-	tunnel.locationsOpen[1] = true;
-	tunnel.locationsDescription[1];
-	tunnel.locationsOpen[2] = true;
-	tunnel.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
-	{
-		tunnel.locationsOpen[i] = false;
-	}
+	tunnel.playerActions[4] = true;
+	tunnel.actionDescription[4];
+	tunnel.playerActions[5] = true;
+	tunnel.actionDescription[5];
+	tunnel.playerActions[6] = true;
+	tunnel.actionDescription[6];
 #pragma endregion
 
 #pragma region therapistOffice
@@ -581,16 +488,12 @@ void createPrison()
 	therapistOffice.actionDescription[2];
 	therapistOffice.playerActions[3] = true;
 	therapistOffice.actionDescription[3];
-	therapistOffice.locationsOpen[0] = true;
-	therapistOffice.locationsDescription[0];
-	therapistOffice.locationsOpen[1] = true;
-	therapistOffice.locationsDescription[1];
-	therapistOffice.locationsOpen[2] = true;
-	therapistOffice.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
-	{
-		therapistOffice.locationsOpen[i] = false;
-	}
+	therapistOffice.playerActions[4] = true;
+	therapistOffice.actionDescription[4];
+	therapistOffice.playerActions[5] = true;
+	therapistOffice.actionDescription[5];
+	therapistOffice.playerActions[6] = true;
+	therapistOffice.actionDescription[6];
 #pragma endregion
 
 #pragma region shower
@@ -611,15 +514,11 @@ void createPrison()
 	shower.actionDescription[2];
 	shower.playerActions[3] = true;
 	shower.actionDescription[3];
-	shower.locationsOpen[0] = true;
-	shower.locationsDescription[0];
-	shower.locationsOpen[1] = true;
-	shower.locationsDescription[1];
-	shower.locationsOpen[2] = true;
-	shower.locationsDescription[2];
-	for (int i = 3; i != 16; i++)
-	{
-		shower.locationsOpen[i] = false;
-	}
+	shower.playerActions[4] = true;
+	shower.actionDescription[4];
+	shower.playerActions[5] = true;
+	shower.actionDescription[5];
+	shower.playerActions[6] = true;
+	shower.actionDescription[6];
 #pragma endregion
 }
