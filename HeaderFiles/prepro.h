@@ -68,10 +68,8 @@ public:
 	//int pPresentAtNight;								//Prisoners Present At Night
 	int gPresentAtDay;									//Guards Present During The Day
 	int gPresentAtNight;								//Guards Present During The Night
-	bool playerActions[7];								//How Many Actions The Player Can Choose In Each Room
-	std::string actionDescription[7];					//Description Of The Actions
-	bool locationsOpen[18];								//How Many Rooms Are Accessible
-	std::string locationsDescription[18];				//Description Of The Rooms
+	bool playerActions[25];								//How Many Actions The Player Can Choose In Each Room
+	std::string actionDescription[25];					//Description Of The Actions
 
 	//Private Variables
 private:
@@ -99,26 +97,12 @@ public:
 		i = 0;
 		std::cout << "\n\n";
 
-		for (int rA = 0; rA != 7; rA++)
+		for (int rA = 0; rA != 25; rA++)
 		{
+			i++;
 			if (playerActions[rA] == true)
 			{
-				i++;
 				std::cout << "[" << i << "] " << actionDescription[rA];
-			}
-		}
-	}
-
-	void showRoomLocations()
-	{
-		std::cout << "\n";
-
-		for (int rL = 0; rL != 18; rL++)
-		{
-			if (locationsOpen[rL] == true)
-			{
-				i++;
-				std::cout << "[" << i << "] " << locationsDescription[rL];
 			}
 		}
 	}
