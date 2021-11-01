@@ -11,7 +11,6 @@ void gamePlay()
 		{
 			cellBlockA.showRoomDescription();
 			cellBlockA.showRoomActions();
-			cellBlockA.showRoomLocations();
 			inputTooltip();
 			std::cin >> playerChoice;
 			switch (playerChoice)
@@ -51,7 +50,6 @@ void gamePlay()
 		{
 			cellBlockB.showRoomDescription();
 			cellBlockB.showRoomActions();
-			cellBlockB.showRoomLocations();
 			inputTooltip();
 			std::cin >> playerChoice;
 			switch (playerChoice)
@@ -85,7 +83,6 @@ void gamePlay()
 		{
 			cellBlockC.showRoomDescription();
 			cellBlockC.showRoomActions();
-			cellBlockC.showRoomLocations();
 			inputTooltip();
 			std::cin >> playerChoice;
 			switch (playerChoice)
@@ -119,7 +116,6 @@ void gamePlay()
 		{
 			cellBlockD.showRoomDescription();
 			cellBlockD.showRoomActions();
-			cellBlockD.showRoomLocations();
 			inputTooltip();
 			std::cin >> playerChoice;
 			switch (playerChoice)
@@ -153,7 +149,6 @@ void gamePlay()
 		{
 			reception.showRoomDescription();
 			reception.showRoomActions();
-			reception.showRoomLocations();
 			inputTooltip();
 			std::cin >> playerChoice;
 			switch (playerChoice)
@@ -203,7 +198,6 @@ void gamePlay()
 		{
 			courtyard.showRoomDescription();
 			courtyard.showRoomActions();
-			courtyard.showRoomLocations();
 			inputTooltip();
 			std::cin >> playerChoice;
 			switch (playerChoice)
@@ -282,7 +276,6 @@ void gamePlay()
 		{
 			canteen.showRoomDescription();
 			canteen.showRoomActions();
-			canteen.showRoomLocations();
 			inputTooltip();
 			std::cin >> playerChoice;
 			switch (playerChoice)
@@ -318,7 +311,6 @@ void gamePlay()
 		{
 			reception.showRoomDescription();
 			reception.showRoomActions();
-			reception.showRoomLocations();
 			inputTooltip();
 			std::cin >> playerChoice;
 			switch (playerChoice)
