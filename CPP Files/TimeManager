@@ -1,0 +1,109 @@
+//Active Time Ints
+int day, hour, min;
+
+//String Time For COUT
+std::string sday, shour, smin;
+
+//Cumulative Ints For End Screen
+int cday, chour, cmin;
+
+//Player Setting For 12 or 24 Hour Clock
+bool tfhourclock = true;
+
+void checkTime()
+{
+	switch (day)
+	{
+	case 1:
+		sday = "Monday";
+		break;
+	case 2:
+		sday = "Tuesday";
+		break;
+	case 3:
+		sday = "Wednesday";
+		break;
+	case 4:
+		sday = "Thursday";
+		break;
+	case 5:
+		sday = "Friday";
+		break;
+	case 6:
+		sday = "Saturday";
+		break;
+	case 7:
+		sday = "Sunday";
+		break;
+	}
+
+	if (tfhourclock)
+	{
+		shour = std::to_string(hour);
+		smin = std::to_string(min);
+
+		if (min < 10)
+		{
+			smin = "0" + smin;
+		}
+
+		if (hour < 12)
+		{
+			shour = "0" + std::to_string(hour);
+		}
+	}
+
+	if (!tfhourclock)
+	{
+
+	}
+}
+
+void addDay(int days)
+{
+	cday += days;
+
+	while (day > 7)
+	{
+		day -= 7;
+	}
+}
+
+void addHour(int hours)
+{
+	chour += hours;
+	hour += hours;
+
+	while (hour > 24)
+	{
+		hour -= 24;
+		addDay(1);
+	}
+}
+
+void addMin(int mins)
+{
+	cmin += mins;
+	min += mins;
+
+	while (min > 60)
+	{
+		min -= 60;
+		addHour(1);
+	}
+}
+
+void displayTime()
+{
+	checkTime();
+
+	if (tfhourclock)
+	{
+		std::cout << sday << " " << shour << ":" << smin;
+	}
+
+	if (!tfhourclock)
+	{
+
+	}
+}
