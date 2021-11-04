@@ -11,7 +11,17 @@ void textTyper(std::string inputText); //Type Text In Typewriter Style
 void inputTooltip(); //Allows the player to know when to input text
 void gamePlay(); //Main script to handle all gameplay elements
 void createPrison();
+void gameTopline();
 extern bool typeWriterEnabled;
+//Time Variables
+extern int day, hour, min;
+extern std::string sday, shour, smin;
+extern int cday, chour, cmin;
+extern bool tfhourclock;
+void addDay(int days);
+void addHour(int hours);
+void addMin(int mins);
+void displayTime();
 
 //Initialize the player
 class Player
@@ -79,7 +89,6 @@ private:
 public:
 	void showRoomDescription()
 	{
-		system("CLS");
 		if (firstVisit)
 		{
 			textTyper(roomDesc2 + roomDescription);
