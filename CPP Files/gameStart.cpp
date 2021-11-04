@@ -136,6 +136,13 @@ void onGameStart()
 	textTyper("\n\nHe says little more, and you are taken away by a burly guard, dressed in his uniform, but his shirt untucked. He commences the invasive search of your \nperson, and thrusts a slightly folded, less slightly ironed, orange uniform into your hands, gesturing you to put it on. You are walked to your cell by \nthe guard who strip searched, and uniformed, you. Over the journey you learn that his name is Franz. You continue to not pay much attention, as you \nperuse the surroundings to learn about ways that you could escape this hellhole. You walk out of Reception, and into the courtyard. Prisoners are \nplaying on the concrete football pitch, or sat to observe the players build a sweat, fighting with the training dummys, or lying on the way-too-small \ngrassy patch in the far corner, under the fence.\n");
 	playerLocation = "cellBlockA";
 	createPrison();
+
+	//Set Time
+	day = 3;
+	hour = 8;
+	min = 0;
+
+	//Enter Game
 	system("pause");
 	gamePlay();
 }
