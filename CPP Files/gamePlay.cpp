@@ -1,7 +1,365 @@
 #include "prepro.h"
 
-bool gameRunning = true;
-int playerChoice;
+bool gameRunning = true;									//Game Loop
+int playerChoice;											//Player Decisions
+
+//Function Names
+
+
+//Name Spaces For Functions
+#pragma region cbA
+namespace cbA
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			cellBlockA.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+
+	void enterRoom()
+	{
+		bool inRoom = true;
+
+		while (inRoom)
+		{
+			if (cellBlockA.playerAccess)
+			{
+				system("CLS");
+				gameTopline();
+				cellBlockA.showRoomDescription();
+				cellBlockA.showRoomActions();
+				inputTooltip();
+				std::cin >> playerChoice;
+			}
+
+			if (!cellBlockA.playerAccess)
+			{
+
+			}
+		}
+	}
+}
+#pragma endregion
+
+#pragma region cbB
+namespace cbB
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			cellBlockB.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region cbC
+namespace cbC
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			cellBlockC.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region cbD
+namespace cbD
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			cellBlockD.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region rcp
+namespace rcp
+{
+	void checkAccess()
+	{
+		reception.playerAccess = false;
+	}
+}
+#pragma endregion
+
+#pragma region cty
+namespace cty
+{
+	void checkAccess()
+	{
+		courtyard.playerAccess = true;
+	}
+}
+#pragma endregion
+
+#pragma region can
+namespace can
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			canteen.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region kit
+namespace kit
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			kitchen.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region inf
+namespace inf
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			infirmary.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region cha
+namespace cha
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			chapel.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region com
+namespace com
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			commonRoom.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region lau
+namespace lau
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			laundry.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region cla
+namespace cla
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			classroom.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region pss
+namespace pss
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			prisonShop.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region vis
+namespace vis
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			visitation.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region prc
+namespace prc
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			personalCell.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region tun
+namespace tun
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			tunnel.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region tpo
+namespace tpo
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			therapistOffice.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+#pragma region shw
+namespace shw
+{
+	void checkAccess()
+	{
+		if (tfhourclock = true && 7 > hour > 21)
+		{
+			shower.playerAccess = false;
+		}
+
+		/*else if(tfhourclock == false && )
+		{
+
+		}*/
+	}
+}
+#pragma endregion
+
+//Using Namespaces
+using namespace cbA; using namespace cbB; using namespace cbC; using namespace cbD; using namespace rcp; using namespace cty; using namespace can; using namespace kit; using namespace inf;
+using namespace cha; using namespace com; using namespace lau; using namespace cla; using namespace pss; using namespace vis; using namespace prc; using namespace tun; using namespace tpo;
+using namespace shw;
 
 void gamePlay()
 {
@@ -9,335 +367,98 @@ void gamePlay()
 	{
 		if (playerLocation == "cellBlockA")
 		{
-			cellBlockA.showRoomDescription();
-			cellBlockA.showRoomActions();
-			inputTooltip();
-			std::cin >> playerChoice;
-			switch (playerChoice)
-			{
-			case 1:
-				//Rummage Through Cell
-				break;
-			case 2:
-				//Socialise With Other Prisoners
-				break;
-			case 3:
-				//Start A Fight
-				break;
-			case 4:
-				//Play Board Games
-			case 5:
-				playerLocation = "personalCell";
-				break;
-			case 6:
-				playerLocation = "shower";
-				break;
-			case 7:
-				playerLocation = "courtyard";
-				break;
-			case 8:
-				playerLocation = "chapel";
-				break;
-			default:
-				std::cout << "Please Enter The Corresponding Number!";
-				inputTooltip();
-				std::cin >> playerChoice;
-				break;
-			}
+			cbA::checkAccess();
+			cbA::enterRoom();
 		}
 
 		if (playerLocation == "cellBlockB")
 		{
-			cellBlockB.showRoomDescription();
-			cellBlockB.showRoomActions();
-			inputTooltip();
-			std::cin >> playerChoice;
-			switch (playerChoice)
-			{
-			case 1:
-				//Rummage Through Cell
-				break;
-			case 2:
-				//Socialise With Other Prisoners
-				break;
-			case 3:
-				//Start A Fight
-				break;
-			case 4:
-				//Play Board Games
-			case 5:
-				playerLocation = "prisonShop";
-				break;
-			case 6:
-				playerLocation = "courtyard";
-				break;
-			default:
-				std::cout << "Please Enter The Corresponding Number!";
-				inputTooltip();
-				std::cin >> playerChoice;
-				break;
-			}
+			cbB::checkAccess();
 		}
 
 		if (playerLocation == "cellBlockC")
 		{
-			cellBlockC.showRoomDescription();
-			cellBlockC.showRoomActions();
-			inputTooltip();
-			std::cin >> playerChoice;
-			switch (playerChoice)
-			{
-			case 1:
-				//Rummage Through Cell
-				break;
-			case 2:
-				//Socialise With Other Prisoners
-				break;
-			case 3:
-				//Start A Fight
-				break;
-			case 4:
-				//Play Board Games
-			case 5:
-				playerLocation = "laundry";
-				break;
-			case 6:
-				playerLocation = "courtyard";
-				break;
-			default:
-				std::cout << "Please Enter The Corresponding Number!";
-				inputTooltip();
-				std::cin >> playerChoice;
-				break;
-			}
+			cbC::checkAccess();
 		}
 
 		if (playerLocation == "cellBlockD")
 		{
-			cellBlockD.showRoomDescription();
-			cellBlockD.showRoomActions();
-			inputTooltip();
-			std::cin >> playerChoice;
-			switch (playerChoice)
-			{
-			case 1:
-				//Rummage Through Cell
-				break;
-			case 2:
-				//Socialise With Other Prisoners
-				break;
-			case 3:
-				//Start A Fight
-				break;
-			case 4:
-				//Play Board Games
-			case 5:
-				playerLocation = "classroom";
-				break;
-			case 6:
-				playerLocation = "courtyard";
-				break;
-			default:
-				std::cout << "Please Enter The Corresponding Number!";
-				inputTooltip();
-				std::cin >> playerChoice;
-				break;
-			}
+			cbD::checkAccess();
 		}
 
 		if (playerLocation == "reception")
 		{
-			reception.showRoomDescription();
-			reception.showRoomActions();
-			inputTooltip();
-			std::cin >> playerChoice;
-			switch (playerChoice)
-			{
-			case 1:
-				if (reception.playerActions[0] == true)
-				{
-					//Are you sure you would like to enter reception
-				}
-				break;
-			case 2:
-				if (reception.playerActions[1] == true)
-				{
-					//Break Into Room
-				}
-				break;
-			case 3:
-				if (reception.playerActions[2] == true)
-				{
-					//Attempt to break into guards cabinet
-				}
-			case 4:
-				if (reception.playerActions[3] == true)
-				{
-					//Raise Prison alarm
-				}
-			case 5:
-				if (reception.playerActions[4] == true)
-				{
-					//Open External Door
-				}
-			case 6:
-				playerLocation = "courtyard";
-				break;
-			case 7:
-				//playerLocation = "prisonEntrance";
-				break;
-			default:
-				std::cout << "Please Enter The Corresponding Number!";
-				inputTooltip();
-				std::cin >> playerChoice;
-				break;
-			}
+			rcp::checkAccess();
 		}
 
 		if (playerLocation == "courtyard")
 		{
-			courtyard.showRoomDescription();
-			courtyard.showRoomActions();
-			inputTooltip();
-			std::cin >> playerChoice;
-			switch (playerChoice)
-			{
-			case 1:
-				//Play Football
-				break;
-			case 2:
-				//Watch Others Play Football
-				break;
-			case 3:
-				//Go For A Run
-				break;
-			case 4:
-				//Practice with Training Dummies
-			case 5:
-				//Socialise With The Other Prisoners
-				break;
-			case 6:
-				//Meditate on The Grass
-				break;
-			case 7:
-				//Start A Fight
-				break;
-			case 8:
-				playerLocation = "cellBlockA";
-				break;
-			case 9:
-				playerLocation = "cellBlockB";
-				break;
-			case 10:
-				playerLocation = "cellBlockC";
-				break;
-			case 11:
-				playerLocation = "cellBlockD";
-				break;
-			case 12:
-				playerLocation = "reception";
-				break;
-			case 13:
-				playerLocation = "canteen";
-				break;
-			case 14:
-				playerLocation = "kitchen";
-				break;
-			case 15:
-				playerLocation = "infirmary";
-				break;
-			case 16:
-				playerLocation = "chapel";
-				break;
-			case 17:
-				playerLocation = "commonRoom";
-				break;
-			case 18:
-				playerLocation = "laundry";
-				break;
-			case 19:
-				playerLocation = "classroom";
-				break;
-			case 20:
-				playerLocation = "prisonShop";
-				break;
-			case 21:
-				playerLocation = "visitation";
-				break;
-			default:
-				std::cout << "Please Enter The Corresponding Number!";
-				inputTooltip();
-				std::cin >> playerChoice;
-				break;
-			}
+			cty::checkAccess();
 		}
 
 		if (playerLocation == "canteen")
 		{
-			canteen.showRoomDescription();
-			canteen.showRoomActions();
-			inputTooltip();
-			std::cin >> playerChoice;
-			switch (playerChoice)
-			{
-			case 1:
-				//Eat Meal
-				break;
-			case 2:
-				//Use Prison Vending Machines
-				break;
-			case 3:
-				//Socialise With Other Prisoners
-				break;
-			case 4:
-				//Start A Fight
-			case 5:
-				//Look For Contraband
-			case 6:
-				playerLocation = "courtyard";
-				break;
-			case 7:
-				playerLocation = "kitchen";
-				break;
-			default:
-				std::cout << "Please Enter The Corresponding Number!";
-				inputTooltip();
-				std::cin >> playerChoice;
-				break;
-			}
+			can::checkAccess();
 		}
 
 		if (playerLocation == "kitchen")
 		{
-			reception.showRoomDescription();
-			reception.showRoomActions();
-			inputTooltip();
-			std::cin >> playerChoice;
-			switch (playerChoice)
-			{
-			case 1:
-				//Rummage Through Cell
-				break;
-			case 2:
-				//Socialise With Other Prisoners
-				break;
-			case 3:
-				//Start A Fight
-				break;
-			case 4:
-				//Play Board Games
-			case 5:
-				playerLocation = "classroom";
-				break;
-			case 6:
-				playerLocation = "courtyard";
-				break;
-			default:
-				std::cout << "Please Enter The Corresponding Number!";
-				inputTooltip();
-				std::cin >> playerChoice;
-				break;
-			}
+			kit::checkAccess();
+		}
+
+		if (playerLocation == "infirmary")
+		{
+			inf::checkAccess();
+		}
+
+		if (playerLocation == "chapel")
+		{
+			cha::checkAccess();
+		}
+
+		if (playerLocation == "commonRoom")
+		{
+			com::checkAccess();
+		}
+
+		if (playerLocation == "laundry")
+		{
+			lau::checkAccess();
+		}
+
+		if (playerLocation == "classroom")
+		{
+			cla::checkAccess();
+		}
+
+		if (playerLocation == "prisonShop")
+		{
+			pss::checkAccess();
+		}
+
+		if (playerLocation == "visitation")
+		{
+			vis::checkAccess();
+		}
+
+		if (playerLocation == "personalCell")
+		{
+			prc::checkAccess();
+		}
+
+		if (playerLocation == "tunnel")
+		{
+			tun::checkAccess();
+		}
+
+		if (playerLocation == "therapistOffice")
+		{
+			tpo::checkAccess();
+		}
+
+		if (playerLocation == "shower")
+		{
+			shw::checkAccess();
 		}
 	}
 }
