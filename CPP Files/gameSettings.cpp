@@ -57,3 +57,8 @@ void inputTooltip()
 	std::cout << "\n_________________________________________" << std::endl;
 	std::cout << " -> ";
 }
+
+void gameTopline()
+{
+	displayTime();
+}
