@@ -1,3 +1,5 @@
+#include "prepro.h"
+
 //Active Time Ints
 int day, hour, min;
 
@@ -62,10 +64,14 @@ void checkTime()
 void addDay(int days)
 {
 	cday += days;
+	day += days;
 
-	while (day > 7)
+	if (tfhourclock)
 	{
-		day -= 7;
+		while (day > 7)
+		{
+			day -= 7;
+		}
 	}
 }
 
@@ -74,10 +80,13 @@ void addHour(int hours)
 	chour += hours;
 	hour += hours;
 
-	while (hour > 24)
+	if (tfhourclock)
 	{
-		hour -= 24;
-		addDay(1);
+		while (hour > 24)
+		{
+			hour -= 24;
+			addDay(1);
+		}
 	}
 }
 
@@ -86,10 +95,13 @@ void addMin(int mins)
 	cmin += mins;
 	min += mins;
 
-	while (min > 60)
+	if (tfhourclock)
 	{
-		min -= 60;
-		addHour(1);
+		while (min > 60)
+		{
+			min -= 60;
+			addHour(1);
+		}
 	}
 }
 
