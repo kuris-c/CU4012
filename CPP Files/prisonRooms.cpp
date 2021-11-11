@@ -1,6 +1,6 @@
 #include "prepro.h"
 
-PrisonRooms cellBlockA, cellBlockB, cellBlockC, cellBlockD, reception, courtyard, canteen, chapel, infirmary, chapel, commonRoom, laundry, classroom, prisonShop, visitation, personalCell, tunnel, therapistOffice, shower;
+PrisonRooms cellBlockA, cellBlockB, cellBlockC, cellBlockD, reception, courtyard, canteen, kitchen, infirmary, chapel, commonRoom, laundry, classroom, prisonShop, visitation, personalCell, tunnel, therapistOffice, shower;
 
 void createPrison()
 {
@@ -44,7 +44,7 @@ void createPrison()
 	cellBlockB.gPresentAtDay;
 	cellBlockB.gPresentAtNight;
 	cellBlockB.playerActions[0] = true;
-	cellBlockB.actionDescription[0] = "[Rummage Through A Random Cell\n";
+	cellBlockB.actionDescription[0] = "Rummage Through A Random Cell\n";
 	cellBlockB.playerActions[1] = true;
 	cellBlockB.actionDescription[1] = "Socialize With The Other Prisoners\n";
 	cellBlockB.playerActions[2] = true;
@@ -115,19 +115,17 @@ void createPrison()
 	//int pPresentAtNight;					
 	reception.gPresentAtDay;
 	reception.gPresentAtNight;
-	reception.playerActions[0] = true;
-	reception.actionDescription[0] = "Are You Sure You Would Like To Enter? Access Is Off Bounds For Prisoners\n";
-	reception.playerActions[1] = false;
-	reception.actionDescription[1] = "Attempt To Break Into Room\n";
-	reception.playerActions[2] = false;
+	reception.playerActions[1] = true;
+	reception.actionDescription[1] = "Attempt To Break Into Side Room\n";
+	reception.playerActions[2] = true;
 	reception.actionDescription[2] = "Attempt To Break Into Guards Cabinet\n";
-	reception.playerActions[3] = false;
+	reception.playerActions[3] = true;
 	reception.actionDescription[3] = "Raise Prison Alarm\n";
-	reception.playerActions[4] = false;
+	reception.playerActions[4] = true;
 	reception.actionDescription[4] = "Open External Door\n";
 	reception.playerActions[5] = true;
 	reception.actionDescription[5] = "Go To The Courtyard\n";
-	reception.playerActions[6] = false;
+	reception.playerActions[6] = true;
 	reception.actionDescription[6] = "Prison Entrance\n";
 #pragma endregion
 
@@ -225,7 +223,7 @@ void createPrison()
 	kitchen.playerActions[0] = true;
 	kitchen.actionDescription[0] = "Work In The Kitchen\n";
 	kitchen.playerActions[1] = true;
-	kitchen.actionDescription[1] = "Look For Controband\n";
+	kitchen.actionDescription[1] = "Look For Contraband\n";
 	kitchen.playerActions[2] = true;
 	kitchen.actionDescription[2] = "Start A Fire\n";
 	kitchen.playerActions[3] = true;
@@ -327,17 +325,17 @@ void createPrison()
 	laundry.playerActions[0] = true;
 	laundry.actionDescription[0] = "Work In The Laundry\n";
 	laundry.playerActions[1] = true;
-	laundry.actionDescription[1] = "Search For Contraband\n";
+	laundry.actionDescription[1] = "Socialise With Other Inmates\n";
 	laundry.playerActions[2] = true;
-	laundry.actionDescription[2];
+	laundry.actionDescription[2] = "Start A Fight\n";
 	laundry.playerActions[3] = true;
-	laundry.actionDescription[3];
+	laundry.actionDescription[3] = "Search For Contraband\n";
 	laundry.playerActions[4] = true;
-	laundry.actionDescription[4];
+	laundry.actionDescription[4] = "Go To The Courtyard\n";
 	laundry.playerActions[5] = true;
-	laundry.actionDescription[5];
+	laundry.actionDescription[5] = "Go To Visitation\n";
 	laundry.playerActions[6] = true;
-	laundry.actionDescription[6];
+	laundry.actionDescription[6] = "Go To Cell Block A\n";
 #pragma endregion
 
 #pragma region classroom
@@ -351,19 +349,21 @@ void createPrison()
 	classroom.gPresentAtDay;
 	classroom.gPresentAtNight;
 	classroom.playerActions[0] = true;
-	classroom.actionDescription[0];
+	classroom.actionDescription[0] = "Join Maths Class\n";
 	classroom.playerActions[1] = true;
-	classroom.actionDescription[1];
+	classroom.actionDescription[1] = "Join English Class\n";
 	classroom.playerActions[2] = true;
-	classroom.actionDescription[2];
+	classroom.actionDescription[2] = "Join Works Course\n";
 	classroom.playerActions[3] = true;
-	classroom.actionDescription[3];
+	classroom.actionDescription[3] = "Start A Fire\n";
 	classroom.playerActions[4] = true;
-	classroom.actionDescription[4];
+	classroom.actionDescription[4] = "Search For Contraband\n";
 	classroom.playerActions[5] = true;
-	classroom.actionDescription[5];
+	classroom.actionDescription[5] = "Go To The Courtyard\n";
 	classroom.playerActions[6] = true;
-	classroom.actionDescription[6];
+	classroom.actionDescription[6] = "Go To The Common Room\n";
+	classroom.playerActions[7] = true;
+	classroom.actionDescription[7] = "Go To Cell Block D\n";
 #pragma endregion
 
 #pragma region prisonShop
@@ -377,19 +377,17 @@ void createPrison()
 	prisonShop.gPresentAtDay;
 	prisonShop.gPresentAtNight;
 	prisonShop.playerActions[0] = true;
-	prisonShop.actionDescription[0];
+	prisonShop.actionDescription[0] = "Work In The Prison Shop\n";
 	prisonShop.playerActions[1] = true;
-	prisonShop.actionDescription[1];
+	prisonShop.actionDescription[1] = "Shop For Goods\n";
 	prisonShop.playerActions[2] = true;
-	prisonShop.actionDescription[2];
+	prisonShop.actionDescription[2] = "Search For Contraband\n";
 	prisonShop.playerActions[3] = true;
-	prisonShop.actionDescription[3];
+	prisonShop.actionDescription[3] = "Go To The Courtyard\n";
 	prisonShop.playerActions[4] = true;
-	prisonShop.actionDescription[4];
+	prisonShop.actionDescription[4] = "Go To Cell Block B\n";
 	prisonShop.playerActions[5] = true;
-	prisonShop.actionDescription[5];
-	prisonShop.playerActions[6] = true;
-	prisonShop.actionDescription[6];
+	prisonShop.actionDescription[5] = "Go To The Kitchen\n";
 #pragma endregion
 
 #pragma region visitation
@@ -403,19 +401,21 @@ void createPrison()
 	visitation.gPresentAtDay;
 	visitation.gPresentAtNight;
 	visitation.playerActions[0] = true;
-	visitation.actionDescription[0];
+	visitation.actionDescription[0] = "Join Your Family\n";
 	visitation.playerActions[1] = true;
-	visitation.actionDescription[1];
+	visitation.actionDescription[1] = "Join Your Laywer\n";
 	visitation.playerActions[2] = true;
-	visitation.actionDescription[2];
+	visitation.actionDescription[2] = "Join Your Pen Pal\n";
 	visitation.playerActions[3] = true;
-	visitation.actionDescription[3];
+	visitation.actionDescription[3] = "Join Your Lover\n";
 	visitation.playerActions[4] = true;
-	visitation.actionDescription[4];
+	visitation.actionDescription[4] = "Join Your Supplier\n";
 	visitation.playerActions[5] = true;
-	visitation.actionDescription[5];
+	visitation.actionDescription[5] = "Make A Phone Call\n";
 	visitation.playerActions[6] = true;
-	visitation.actionDescription[6];
+	visitation.actionDescription[6] = "Go To The Courtyard\n";
+	visitation.playerActions[7] = true;
+	visitation.actionDescription[7] = "Go To The Laundry Room\n";			
 #pragma endregion
 
 #pragma region personalCell
@@ -429,19 +429,21 @@ void createPrison()
 	personalCell.gPresentAtDay;
 	personalCell.gPresentAtNight;
 	personalCell.playerActions[0] = true;
-	personalCell.actionDescription[0];
+	personalCell.actionDescription[0] = "Go To Sleep\n";
 	personalCell.playerActions[1] = true;
-	personalCell.actionDescription[1];
+	personalCell.actionDescription[1] = "Go To The Window\n";
 	personalCell.playerActions[2] = true;
-	personalCell.actionDescription[2];
+	personalCell.actionDescription[2] = "Store Contraband\n";
 	personalCell.playerActions[3] = true;
-	personalCell.actionDescription[3];
+	personalCell.actionDescription[3] = "Eat Meal\n";
 	personalCell.playerActions[4] = true;
-	personalCell.actionDescription[4];
+	personalCell.actionDescription[4] = "Use Contraband\n";
 	personalCell.playerActions[5] = true;
-	personalCell.actionDescription[5];
+	personalCell.actionDescription[5] = "Start Digging Tunnel\n";
 	personalCell.playerActions[6] = true;
-	personalCell.actionDescription[6];
+	personalCell.actionDescription[7] = "Continue Digging Tunnel\n";
+	personalCell.playerActions[7] = true;
+	personalCell.actionDescription[7] = "Return To The Cell Block\n";
 #pragma endregion
 
 #pragma region tunnel
@@ -455,19 +457,11 @@ void createPrison()
 	tunnel.gPresentAtDay;
 	tunnel.gPresentAtNight;
 	tunnel.playerActions[0] = true;
-	tunnel.actionDescription[0];
+	tunnel.actionDescription[0] = "Continue Through The Tunnel\n";
 	tunnel.playerActions[1] = true;
-	tunnel.actionDescription[1];
+	tunnel.actionDescription[1] = "Dig Further In Your Tunnel\n";
 	tunnel.playerActions[2] = true;
-	tunnel.actionDescription[2];
-	tunnel.playerActions[3] = true;
-	tunnel.actionDescription[3];
-	tunnel.playerActions[4] = true;
-	tunnel.actionDescription[4];
-	tunnel.playerActions[5] = true;
-	tunnel.actionDescription[5];
-	tunnel.playerActions[6] = true;
-	tunnel.actionDescription[6];
+	tunnel.actionDescription[2] = "Return To Your Cell\n";
 #pragma endregion
 
 #pragma region therapistOffice
@@ -481,19 +475,13 @@ void createPrison()
 	therapistOffice.gPresentAtDay;
 	therapistOffice.gPresentAtNight;
 	therapistOffice.playerActions[0] = true;
-	therapistOffice.actionDescription[0];
+	therapistOffice.actionDescription[0] = "Attend Appointment\n";
 	therapistOffice.playerActions[1] = true;
-	therapistOffice.actionDescription[1];
+	therapistOffice.actionDescription[1] = "Search For Contraband\n";
 	therapistOffice.playerActions[2] = true;
-	therapistOffice.actionDescription[2];
+	therapistOffice.actionDescription[2] = "Search Through Prisoner Files\n";
 	therapistOffice.playerActions[3] = true;
-	therapistOffice.actionDescription[3];
-	therapistOffice.playerActions[4] = true;
-	therapistOffice.actionDescription[4];
-	therapistOffice.playerActions[5] = true;
-	therapistOffice.actionDescription[5];
-	therapistOffice.playerActions[6] = true;
-	therapistOffice.actionDescription[6];
+	therapistOffice.actionDescription[3] = "Return To The Infirmary\n";
 #pragma endregion
 
 #pragma region shower
@@ -507,18 +495,12 @@ void createPrison()
 	shower.gPresentAtDay;
 	shower.gPresentAtNight;
 	shower.playerActions[0] = true;
-	shower.actionDescription[0];
+	shower.actionDescription[0] = "Take A Shower\n";
 	shower.playerActions[1] = true;
-	shower.actionDescription[1];
+	shower.actionDescription[1] = "Start A Fight\n";
 	shower.playerActions[2] = true;
-	shower.actionDescription[2];
-	shower.playerActions[3] = true;
-	shower.actionDescription[3];
-	shower.playerActions[4] = true;
-	shower.actionDescription[4];
-	shower.playerActions[5] = true;
-	shower.actionDescription[5];
-	shower.playerActions[6] = true;
-	shower.actionDescription[6];
+	shower.actionDescription[2] = "Search For Contraband\n";
+	shower.playerActions[1] = true;
+	shower.actionDescription[1] = "Return To The Cell Block\n";
 #pragma endregion
 }
