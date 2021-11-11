@@ -10,10 +10,12 @@ std::string sday, shour, smin;
 int cday, chour, cmin;
 
 //Player Setting For 12 or 24 Hour Clock
-bool tfhourclock = true;
+bool tfhourclock;
 
 void checkTime()
 {
+	tfhourclock = true;
+
 	switch (day)
 	{
 	case 1:
@@ -111,10 +113,10 @@ void displayTime()
 
 	if (tfhourclock)
 	{
-		std::cout << sday << " " << shour << ":" << smin;
+		std::cout << sday << " " << shour << ":" << smin << "\n\n";
 	}
 
-	if (!tfhourclock)
+	else if (!tfhourclock)
 	{
 
 	}
