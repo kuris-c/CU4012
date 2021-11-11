@@ -22,6 +22,7 @@ void addDay(int days);
 void addHour(int hours);
 void addMin(int mins);
 void displayTime();
+void checkTime();
 
 //Initialize the player
 class Player
